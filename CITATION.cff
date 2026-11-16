@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use RunbookDrift, please cite it as below."
+title: "RunbookDrift: benchmark and scripts for detecting stale runbook steps"
+authors:
+  - family-names: Sabhadiya
+    given-names: Parth Hareshbhai
+date-released: 2026-11-16
