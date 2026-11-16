@@ -1,0 +1,155 @@
+{
+ "scope": "maintained",
+ "train": {
+  "n": 7228,
+  "pos": 111,
+  "docs": 405
+ },
+ "test": {
+  "n": 8421,
+  "pos": 178,
+  "docs": 441,
+  "base_rate": 0.0211
+ },
+ "results": {
+  "Random": {
+   "auroc": 0.499,
+   "ap": 0.022,
+   "p_at_5pct": 0.031,
+   "recall_at_10pct": 0.118,
+   "auroc_ci": [
+    0.456,
+    0.539
+   ]
+  },
+  "Line age (git blame)": {
+   "auroc": 0.432,
+   "ap": 0.019,
+   "p_at_5pct": 0.005,
+   "recall_at_10pct": 0.09,
+   "auroc_ci": [
+    0.328,
+    0.525
+   ]
+  },
+  "Document age": {
+   "auroc": 0.458,
+   "ap": 0.021,
+   "p_at_5pct": 0.017,
+   "recall_at_10pct": 0.174,
+   "auroc_ci": [
+    0.326,
+    0.579
+   ]
+  },
+  "Reference confirmation age (single signal)": {
+   "auroc": 0.433,
+   "ap": 0.018,
+   "p_at_5pct": 0.005,
+   "recall_at_10pct": 0.017,
+   "auroc_ci": [
+    0.332,
+    0.517
+   ]
+  },
+  "Reference decay (single signal)": {
+   "auroc": 0.494,
+   "ap": 0.021,
+   "p_at_5pct": 0.019,
+   "recall_at_10pct": 0.067,
+   "auroc_ci": [
+    0.426,
+    0.549
+   ]
+  },
+  "Link count (single signal)": {
+   "auroc": 0.671,
+   "ap": 0.046,
+   "p_at_5pct": 0.048,
+   "recall_at_10pct": 0.157,
+   "auroc_ci": [
+    0.62,
+    0.723
+   ]
+  },
+  "Change propagation (single signal)": {
+   "auroc": 0.478,
+   "ap": 0.021,
+   "p_at_5pct": 0.014,
+   "recall_at_10pct": 0.056,
+   "auroc_ci": [
+    0.458,
+    0.5
+   ]
+  },
+  "Age + history (LR)": {
+   "auroc": 0.593,
+   "ap": 0.047,
+   "p_at_5pct": 0.059,
+   "recall_at_10pct": 0.202,
+   "auroc_ci": [
+    0.486,
+    0.705
+   ]
+  },
+  "RunbookGraph signals only (LR)": {
+   "auroc": 0.624,
+   "ap": 0.038,
+   "p_at_5pct": 0.038,
+   "recall_at_10pct": 0.152,
+   "auroc_ci": [
+    0.557,
+    0.693
+   ]
+  },
+  "RunbookGraph + age + history (LR)": {
+   "auroc": 0.646,
+   "ap": 0.056,
+   "p_at_5pct": 0.076,
+   "recall_at_10pct": 0.23,
+   "auroc_ci": [
+    0.569,
+    0.722
+   ]
+  },
+  "RunbookGraph + age + history (GBDT)": {
+   "auroc": 0.616,
+   "ap": 0.031,
+   "p_at_5pct": 0.029,
+   "recall_at_10pct": 0.202,
+   "auroc_ci": [
+    0.557,
+    0.678
+   ]
+  }
+ },
+ "diff_best_vs_lineage": {
+  "ci": [
+   0.065,
+   0.372
+  ],
+  "p_one_sided": 0.001
+ },
+ "lr_coefficients": {
+  "log_ent_conf_age_max": 0.195,
+  "log_ent_conf_age_mean": 0.157,
+  "frac_unconfirmed_1y": -0.27,
+  "log_df_other_min": -0.888,
+  "log_df_other_mean": 0.538,
+  "frac_orphan": -0.392,
+  "decay_max": -0.229,
+  "decay_mean": 0.048,
+  "log_n_ents": 0.264,
+  "n_urls": -0.181,
+  "n_hosts": 0.229,
+  "is_code": -0.138,
+  "log_retired_other_docs_max": -0.236,
+  "retire_rate_max": -0.525,
+  "retired_same_doc": 0.093,
+  "frac_ents_retired_elsewhere": 0.967,
+  "recent_retire": -0.207,
+  "log_line_age": -0.402,
+  "log_doc_age": -0.326,
+  "log_doc_commits_1y": 0.301
+ }
+}
